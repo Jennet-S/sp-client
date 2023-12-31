@@ -18,7 +18,7 @@ function AddPatientForm({ onAdd }) {
       ...prevPatient,
       [name]: value,
     }));
-    console.log(patient);
+    // console.log(patient);
   }
 
   function submitPatient(event) {
