@@ -27,7 +27,7 @@ function AddPatientForm({ onAdd }) {
       id: patient.nhi,
     };
 
-    fetch('/api/patients', {
+    fetch('http://localhost:3000/api/patients', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
