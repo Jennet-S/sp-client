@@ -8,6 +8,8 @@ function AddPatientForm({ onAdd }) {
     lastName: "",
     age: "",
     resus: "",
+    diagnosis: "",
+    history: ""
   });
 
   function handleChange(e) {
@@ -42,12 +44,14 @@ function AddPatientForm({ onAdd }) {
       .catch(error => console.error('Error adding patient:', error));
 
     setPatient({
-      room: '',
-      nhi: '',
-      firstName: '',
-      lastName: '',
-      age: '',
-      resus: '',
+      room: "",
+    nhi: "",
+    firstName: "",
+    lastName: "",
+    age: "",
+    resus: "",
+    diagnosis: "",
+    history: ""
     });
   }
 
@@ -94,6 +98,20 @@ function AddPatientForm({ onAdd }) {
           onChange={handleChange}
           value={patient.resus}
           placeholder="resus status"
+          required
+        />
+        <input
+          name="diagnosis"
+          onChange={handleChange}
+          value={patient.diagnosis}
+          placeholder="diagnosis"
+          required
+        />
+        <input
+          name="history"
+          onChange={handleChange}
+          value={patient.history}
+          placeholder="history"
           required
         />
         <button type="submit">Add</button>
